@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jonaer Casundo | IT Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+    body { background: #f9fafb; color: #1f2937; line-height: 1.6; }
+    a { color: #3b82f6; text-decoration: none; }
+
+    header {
+      padding: 80px 20px;
+      text-align: center;
+      background: #ffffff;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    header h1 { font-size: 3rem; font-weight: 700; color: #1f2937; }
+    header p { font-size: 1.2rem; color: #4b5563; margin-top: 10px; }
+
+    .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
+
+    section { margin-bottom: 80px; }
+    section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      border-left: 5px solid #3b82f6;
+      padding-left: 15px;
+      color: #1f2937;
+    }
+
+    .about p { max-width: 800px; color: #374151; }
+
+    .skills, .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+      transition: transform .3s, box-shadow .3s;
+    }
+
+    .card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
+
+    .card h3 { margin-bottom: 10px; color: #3b82f6; }
+    .card p, .card li { color: #4b5563; font-size: .95rem; }
+
+    .experience ul { list-style: disc inside; margin-top: 15px; }
+    .experience li { margin-bottom: 10px; }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #ffffff;
+      border-top: 1px solid #e5e7eb;
+      color: #6b7280;
+    }
+
+    .contact a { margin: 0 10px; }
+
+    @media(max-width:768px){
+      header h1 { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Jonaer Casundo</h1>
+  <p>IT Manager • MIS Professional • Systems & Infrastructure Leader</p>
+</header>
+
+<div class="container">
+
+  <section class="about">
+    <h2>About Me</h2>
+    <p>
+      Results-driven IT Manager with hands-on experience leading enterprise IT operations, infrastructure, and software development. Skilled in aligning technology with business goals, managing teams, and delivering secure, scalable solutions including centralized systems, CCTV infrastructure, and web-based applications.
+    </p>
+  </section>
+
+  <section>
+    <h2>Core Skills</h2>
+    <div class="skills">
+      <div class="card"><h3>IT Leadership</h3><p>IT Strategy, Team Leadership, Project & Vendor Management</p></div>
+      <div class="card"><h3>Infrastructure</h3><p>Network Design, Server Administration, CCTV & Access Control</p></div>
+      <div class="card"><h3>Software Systems</h3><p>Web Applications, Databases, Centralized Enterprise Systems</p></div>
+      <div class="card"><h3>Security</h3><p>Data Protection, IT Security Fundamentals, System Reliability</p></div>
+    </div>
+  </section>
+
+  <section class="experience">
+    <h2>Professional Experience</h2>
+    <div class="card">
+      <h3>MIS Officer / IT Lead</h3>
+      <p><strong>Southspring Development Corporation</strong> | 2023 – 2026</p>
+      <ul>
+        <li>Led enterprise IT operations covering software, infrastructure, and support.</li>
+        <li>Developed credit and collection systems improving data accuracy and reporting.</li>
+        <li>Managed centralized databases and enterprise CCTV implementations.</li>
+        <li>Coordinated vendors, budgets, and system upgrades.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Key Projects</h2>
+    <div class="projects">
+
+      <div class="card">
+        <img src="images/credit-collection.jpg" alt="Credit and Collection System" style="width:100%; border-radius:8px; margin-bottom:15px;">
+        <h3>Credit and Collection System</h3>
+        <p><strong>Description:</strong> Enterprise web-based system designed to manage client billing, payments, penalties, and reporting.</p>
+        <p><strong>Key Features & Functionality:</strong></p>
+        <ul>
+          <li>Centralized customer and payment records</li>
+          <li>Automated billing, balance tracking, and reports</li>
+          <li>Secure database and role-based access</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <img src="images/business-manager.jpg" alt="Business Manager App" style="width:100%; border-radius:8px; margin-bottom:15px;">
+        <h3>Business Manager App</h3>
+        <p><strong>Description:</strong> Internal enterprise application for monitoring operations and supporting management decisions.</p>
+        <p><strong>Key Features & Functionality:</strong></p>
+        <ul>
+          <li>Operational dashboards and summaries</li>
+          <li>Centralized data access for managers</li>
+          <li>Improved visibility of business performance</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <img src="images/chronicle-book.jpg" alt="The Chronicle Book Game" style="width:100%; border-radius:8px; margin-bottom:15px;">
+        <h3>The Chronicle Book</h3>
+        <p><strong>Description:</strong> A 3D role-playing mobile game inspired by the Superbook series, developed as an educational tool for biblical learning.</p>
+        <p><strong>Key Features & Functionality:</strong></p>
+        <ul>
+          <li>Story-driven RPG gameplay with multiple stages</li>
+          <li>Educational content based on biblical stories</li>
+          <li>Interactive missions and character progression</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+  <section>
+    <h2>Live Demos</h2>
+    <div class="projects">
+
+      <div class="card">
+        <h3>Credit and Collection System</h3>
+        <p><strong>Demo Access:</strong> Live demonstration of the billing, payment tracking, and reporting system.</p>
+        <p>
+          <a href="https://demo-credit-collection.example.com" target="_blank">▶ View Live Demo</a>
+        </p>
+        <p><em>Note: Demo credentials can be provided upon request.</em></p>
+      </div>
+
+      <div class="card">
+        <h3>Business Manager App</h3>
+        <p><strong>Demo Access:</strong> Interactive dashboard showcasing enterprise monitoring and management tools.</p>
+        <p>
+          <a href="https://demo-business-manager.example.com" target="_blank">▶ View Live Demo</a>
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>The Chronicle Book</h3>
+        <p><strong>Demo Access:</strong> Gameplay preview and walkthrough of the 3D educational RPG.</p>
+        <p>
+          <a href="https://demo-chronicle-book.example.com" target="_blank">▶ View Demo</a>
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:jcasundo.sedge@gmail.com">jcasundo.sedge@gmail.com</a></p>
+    <p>
+      <a href="https://www.linkedin.com/in/jonaer-casundo-a30737288" target="_blank">LinkedIn</a> |
+      <a href="https://www.academia.edu/40342352/Chapter_" target="_blank">Thesis</a>
+    </p>
+  </section>
+
+</div>
+
+<footer>
+  © 2026 Jonaer Casundo • IT Manager Portfolio
+</footer>
+
+</body>
+</html>
