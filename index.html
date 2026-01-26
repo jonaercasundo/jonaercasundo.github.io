@@ -12,6 +12,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    .doc-button {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 12px 20px;
+      background: var(--primary);
+      color: white;
+      border-radius: 10px;
+      font-size: .9rem;
+      font-weight: 600;
+      transition: transform .2s ease, background .3s ease;
+    }
+    
+    .doc-button:hover {
+      background: #1d4ed8;
+      transform: translateY(-2px);
+    }
+
     .contact-info p {
       margin-bottom: 16px;
       font-size: .95rem;
@@ -320,6 +337,7 @@
   <nav>
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
+    <a href="#documents">Documents</a>
     <a href="#projects">Projects</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -461,6 +479,40 @@
       </ul>
     </div>
   </section>
+  <section id="documents" class="fade">
+  <h2>Documents</h2>
+
+  <div class="grid" style="max-width:900px;">
+
+    <div class="card">
+      <h3>Cover Letter</h3>
+      <p>
+        A professional cover letter outlining my background, leadership experience,
+        and alignment with enterprise IT and business objectives.
+      </p>
+      <a href="Jonaer_Casundo_Cover_Letter.pdf" 
+         class="doc-button" 
+         download>
+        📄 Download Cover Letter
+      </a>
+    </div>
+
+    <div class="card">
+      <h3>Resume</h3>
+      <p>
+        A detailed resume highlighting my professional experience, technical expertise,
+        leadership roles, and key projects.
+      </p>
+      <a href="Jonaer_Casundo_Resume.pdf" 
+         class="doc-button" 
+         download>
+        📄 Download Resume
+      </a>
+    </div>
+
+  </div>
+</section>
+
   <section id="projects" class="fade">
     <h2>Key Projects</h2>
     <div class="grid">
@@ -563,23 +615,6 @@
         .scrollIntoView({ behavior: 'smooth' });
     });
   });
-</script>
-<script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('show');
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.fade').forEach(el => observer.observe(el));
-
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      document.querySelector(link.getAttribute('href'))
-        .scrollIntoView({ behavior: 'smooth' });
-    });
-  });
 
   const form = document.getElementById('contactForm');
   const modal = document.getElementById('successModal');
@@ -634,6 +669,7 @@
   </div>
 </div>
 </html>
+
 
 
 
