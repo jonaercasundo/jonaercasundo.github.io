@@ -253,19 +253,28 @@
     </div>
   </section>
 
-  <section id="contact" class="fade">
-    <h2>Contact</h2>
-    <div class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea rows="5" placeholder="Your Message" required></textarea>
-      <button>Send Message</button>
-    </div>
-    <p style="margin-top:25px">
-      <a href="https://www.linkedin.com/in/jonaer-casundo-a30737288" target="_blank">LinkedIn</a> | 
-      <a href="https://www.academia.edu/40342352/Chapter_" target="_blank">Thesis</a>
-    </p>
-  </section>
+<section id="contact" class="fade">
+  <h2>Contact</h2>
+
+  <form class="contact-form" 
+        id="contactForm"
+        action="https://formspree.io/f/mpqdpnok" 
+        method="POST">
+
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+    <button type="submit">Send Message</button>
+    <p id="formStatus" style="margin-top:15px;font-size:.9rem;"></p>
+  </form>
+
+  <p style="margin-top:25px">
+    <a href="https://www.linkedin.com/in/jonaer-casundo-a30737288" target="_blank">LinkedIn</a> | 
+    <a href="https://www.academia.edu/40342352/Chapter_" target="_blank">Thesis</a>
+  </p>
+</section>
+
 
 </div>
 
@@ -293,4 +302,5 @@
 
 </body>
 </html>
+
 
