@@ -12,6 +12,65 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    /* MODAL */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity .3s ease;
+      z-index: 9999;
+    }
+    
+    .modal.show {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      text-align: center;
+      max-width: 380px;
+      box-shadow: var(--shadow-md);
+      animation: scaleIn .3s ease;
+    }
+    
+    .modal-content h3 {
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+    
+    .modal-content p {
+      font-size: .95rem;
+      color: var(--text-muted);
+      margin-bottom: 20px;
+    }
+    
+    .modal-content button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: .9rem;
+    }
+    
+    .modal-content button:hover {
+      background: #1d4ed8;
+    }
+    
+    @keyframes scaleIn {
+      from { transform: scale(.9); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
     :root {
       --bg: #f8fafc;
       --card: #ffffff;
@@ -300,8 +359,24 @@
   });
 </script>
 <script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('show');
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      document.querySelector(link.getAttribute('href'))
+        .scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+
   const form = document.getElementById('contactForm');
-  const status = document.getElementById('formStatus');
+  const modal = document.getElementById('successModal');
 
   form.addEventListener('submit', async e => {
     e.preventDefault();
@@ -315,18 +390,32 @@
     });
 
     if (response.ok) {
-      status.textContent = "✅ Message sent successfully!";
-      status.style.color = "#2563eb";
-      form.reset();
-    } else {
-      status.textContent = "❌ Something went wrong. Please try again.";
-      status.style.color = "red";
+      modal.classList.add('show');
+
+      // Auto refresh after 2.5 seconds
+      setTimeout(() => {
+        location.reload();
+      }, 2500);
     }
   });
+
+  function closeModal() {
+    location.reload();
+  }
 </script>
 
+
 </body>
+  <!-- Success Modal -->
+<div id="successModal" class="modal">
+  <div class="modal-content">
+    <h3>✅ Message Sent</h3>
+    <p>Thank you for reaching out. I’ll get back to you shortly.</p>
+    <button onclick="closeModal()">OK</button>
+  </div>
+</div>
 </html>
+
 
 
 
