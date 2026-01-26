@@ -12,6 +12,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    .contact-info p {
+      margin-bottom: 16px;
+      font-size: .95rem;
+      color: var(--text-muted);
+    }
+    
+    .contact-info a {
+      word-break: break-all;
+    }
+
     /* MODAL */
     .modal {
       position: fixed;
@@ -315,24 +325,61 @@
 <section id="contact" class="fade">
   <h2>Contact</h2>
 
-  <form class="contact-form" 
-        id="contactForm"
-        action="https://formspree.io/f/mpqdpnok" 
-        method="POST">
+  <div class="grid" style="max-width:1100px;">
 
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <!-- CONTACT FORM -->
+    <form class="contact-form" 
+          id="contactForm"
+          action="https://formspree.io/f/mpqdpnok" 
+          method="POST">
 
-    <button type="submit">Send Message</button>
-    <p id="formStatus" style="margin-top:15px;font-size:.9rem;"></p>
-  </form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
-  <p style="margin-top:25px">
-    <a href="https://www.linkedin.com/in/jonaer-casundo-a30737288" target="_blank">LinkedIn</a> | 
-    <a href="https://www.academia.edu/40342352/Chapter_" target="_blank">Thesis</a>
-  </p>
+      <button type="submit">Send Message</button>
+      <p id="formStatus" style="margin-top:15px;font-size:.9rem;"></p>
+    </form>
+
+    <!-- CONTACT INFO -->
+    <div class="contact-info card">
+      <h3 style="color:var(--primary); margin-bottom:18px;">
+        Get in Touch
+      </h3>
+
+      <p>
+        📧 <strong>Email</strong><br>
+        <a href="mailto:jonaer.casundo@gmail.com">
+          jonaer.casundo@gmail.com
+        </a>
+      </p>
+
+      <p>
+        📱 <strong>Mobile</strong><br>
+        <a href="tel:+639123456789">
+          +63 912 345 6789
+        </a>
+      </p>
+
+      <p>
+        💼 <strong>LinkedIn</strong><br>
+        <a href="https://www.linkedin.com/in/jonaer-casundo-a30737288" target="_blank">
+          linkedin.com/in/jonaer-casundo
+        </a>
+      </p>
+
+      <p>
+        💻 <strong>GitHub</strong><br>
+        <a href="https://github.com/yourusername" target="_blank">
+          github.com/yourusername
+        </a>
+      </p>
+    </div>
+
+  </div>
+
 </section>
+
 
 
 </div>
@@ -415,6 +462,7 @@
   </div>
 </div>
 </html>
+
 
 
 
