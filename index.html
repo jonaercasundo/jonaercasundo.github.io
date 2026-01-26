@@ -4,85 +4,180 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jonaer Casundo | IT Manager</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- SEO -->
+  <meta name="description" content="Jonaer Casundo – IT Manager, MIS Professional, Systems & Infrastructure Leader. Portfolio showcasing enterprise systems, leadership, and projects." />
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
   <style>
+    :root {
+      --bg: #f8fafc;
+      --card: #ffffff;
+      --primary: #2563eb;
+      --primary-soft: #dbeafe;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --border: #e5e7eb;
+      --radius: 14px;
+      --shadow-sm: 0 4px 12px rgba(0,0,0,.05);
+      --shadow-md: 0 12px 30px rgba(0,0,0,.08);
+    }
+
     * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-    body { background: #f9fafb; color: #1f2937; line-height: 1.6; }
-    a { color: #3b82f6; text-decoration: none; }
+    body { background: var(--bg); color: var(--text-main); line-height: 1.7; }
+    img { max-width: 100%; display: block; }
+    a { color: var(--primary); text-decoration: none; font-weight: 500; }
 
+    /* HEADER */
     header {
-      padding: 80px 20px;
+      background: linear-gradient(135deg, #1e3a8a, #2563eb);
+      color: white;
+      padding: 90px 20px 70px;
       text-align: center;
-      background: #ffffff;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-      border-bottom: 1px solid #e5e7eb;
     }
 
-    header h1 { font-size: 3rem; font-weight: 700; color: #1f2937; }
-    header p { font-size: 1.2rem; color: #4b5563; margin-top: 10px; }
+    header h1 { font-size: clamp(2.4rem, 5vw, 3.5rem); font-weight: 800; }
+    header p { margin-top: 12px; font-size: 1.15rem; opacity: .9; }
 
-    .container { max-width: 1100px; margin: auto; padding: 60px 20px; }
+    nav {
+      margin-top: 35px;
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
 
-    section { margin-bottom: 80px; }
+    nav a {
+      color: white;
+      opacity: .9;
+      padding-bottom: 4px;
+      border-bottom: 2px solid transparent;
+      transition: all .3s;
+    }
+
+    nav a:hover {
+      opacity: 1;
+      border-color: white;
+    }
+
+    /* LAYOUT */
+    .container { max-width: 1200px; margin: auto; padding: 80px 20px; }
+    section { margin-bottom: 90px; }
+
     section h2 {
-      font-size: 2rem;
-      margin-bottom: 20px;
-      border-left: 5px solid #3b82f6;
-      padding-left: 15px;
-      color: #1f2937;
+      font-size: 2.1rem;
+      margin-bottom: 35px;
+      position: relative;
+      padding-left: 18px;
     }
 
-    .about p { max-width: 800px; color: #374151; }
+    section h2::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 10px;
+      height: 60%;
+      width: 5px;
+      background: var(--primary);
+      border-radius: 10px;
+    }
 
-    .skills, .projects {
+    /* ABOUT */
+    .about p { max-width: 850px; font-size: 1.05rem; color: var(--text-muted); }
+
+    /* GRID */
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 26px;
     }
 
+    /* CARD */
     .card {
-      background: #ffffff;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-      transition: transform .3s, box-shadow .3s;
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 26px;
+      box-shadow: var(--shadow-sm);
+      transition: transform .35s ease, box-shadow .35s ease;
     }
 
-    .card:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.1); }
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-md);
+    }
 
-    .card h3 { margin-bottom: 10px; color: #3b82f6; }
-    .card p, .card li { color: #4b5563; font-size: .95rem; }
+    .card h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.2rem; }
+    .card p, .card li { color: var(--text-muted); font-size: .96rem; }
+    .card ul { margin-top: 12px; padding-left: 18px; }
+    .card li { margin-bottom: 8px; }
 
-    .fade-in { opacity: 0; transform: translateY(20px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
+    /* EXPERIENCE */
+    .experience .card { border-left: 6px solid var(--primary); }
 
-    .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.5); }
-    .modal-content { background-color: #ffffff; margin: 5% auto; padding: 30px; border-radius: 12px; width: 80%; max-width: 600px; position: relative; }
-    .close { position: absolute; top: 10px; right: 20px; font-size: 28px; font-weight: bold; cursor: pointer; color: #6b7280; }
-    .close:hover { color: #1f2937; }
+    /* PROJECTS */
+    .project-card img {
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
 
-    .contact-form { max-width: 500px; margin: auto; }
-    .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 15px; border: 1px solid #e5e7eb; border-radius: 8px; font-size: 1rem; }
-    .contact-form button { background: #3b82f6; color: white; padding: 12px 24px; border: none; border-radius: 8px; cursor: pointer; font-size: 1rem; transition: background 0.3s, transform 0.2s; }
-    .contact-form button:hover { background: #2563eb; transform: scale(1.05); }
-    .contact-form button:active { transform: scale(0.95); }
-    .form-feedback { margin-top: 15px; font-size: 0.9rem; }
+    .project-card span {
+      display: inline-block;
+      margin-top: 12px;
+      color: var(--primary);
+      font-weight: 600;
+    }
 
-    .experience ul { list-style: disc inside; margin-top: 15px; }
-    .experience li { margin-bottom: 10px; }
+    /* CONTACT */
+    .contact-form {
+      max-width: 520px;
+      background: var(--card);
+      padding: 35px;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+    }
 
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 16px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      font-size: .95rem;
+    }
+
+    .contact-form button {
+      background: var(--primary);
+      color: white;
+      padding: 14px 26px;
+      border-radius: 10px;
+      border: none;
+      font-size: .95rem;
+      cursor: pointer;
+      transition: transform .2s ease, background .3s ease;
+    }
+
+    .contact-form button:hover { background: #1d4ed8; transform: translateY(-2px); }
+
+    /* FOOTER */
     footer {
+      background: white;
       text-align: center;
       padding: 40px 20px;
-      background: #ffffff;
-      border-top: 1px solid #e5e7eb;
-      color: #6b7280;
+      border-top: 1px solid var(--border);
+      color: #64748b;
+      font-size: .9rem;
     }
 
-    .contact a { margin: 0 10px; }
+    /* ANIMATION */
+    .fade { opacity: 0; transform: translateY(25px); transition: all .7s ease; }
+    .fade.show { opacity: 1; transform: translateY(0); }
 
-    @media(max-width:768px){
-      header h1 { font-size: 2.2rem; }
+    @media(max-width: 768px) {
+      header { padding: 70px 20px 55px; }
+      section h2 { font-size: 1.8rem; }
     }
   </style>
 </head>
@@ -101,16 +196,16 @@
 
 <div class="container">
 
-  <section id="about" class="about fade-in">
+  <section id="about" class="about fade">
     <h2>About Me</h2>
     <p>
-      Results-driven IT Manager with hands-on experience leading enterprise IT operations, infrastructure, and software development. Skilled in aligning technology with business goals, managing teams, and delivering secure, scalable solutions including centralized systems, CCTV infrastructure, and web-based applications.
+      Results-driven IT Manager with proven experience leading enterprise IT operations, infrastructure, and software development. Strong background in aligning technology with business goals, managing teams, and delivering secure, scalable systems including centralized platforms, CCTV infrastructure, and web-based applications.
     </p>
   </section>
 
-  <section>
+  <section class="fade">
     <h2>Core Skills</h2>
-    <div class="skills">
+    <div class="grid">
       <div class="card"><h3>IT Leadership</h3><p>IT Strategy, Team Leadership, Project & Vendor Management</p></div>
       <div class="card"><h3>Infrastructure</h3><p>Network Design, Server Administration, CCTV & Access Control</p></div>
       <div class="card"><h3>Software Systems</h3><p>Web Applications, Databases, Centralized Enterprise Systems</p></div>
@@ -118,108 +213,56 @@
     </div>
   </section>
 
-  <section id="experience" class="experience fade-in">
+  <section id="experience" class="experience fade">
     <h2>Professional Experience</h2>
     <div class="card">
       <h3>MIS Officer / IT Lead</h3>
       <p><strong>Southspring Development Corporation</strong> | 2023 – 2026</p>
       <ul>
-        <li>Led enterprise IT operations covering software, infrastructure, and support.</li>
-        <li>Developed credit and collection systems improving data accuracy and reporting.</li>
-        <li>Managed centralized databases and enterprise CCTV implementations.</li>
-        <li>Coordinated vendors, budgets, and system upgrades.</li>
+        <li>Led enterprise IT operations covering infrastructure, systems, and support.</li>
+        <li>Designed and deployed credit and collection systems improving reporting accuracy.</li>
+        <li>Implemented centralized databases and enterprise CCTV solutions.</li>
+        <li>Managed vendors, budgets, and technology roadmaps.</li>
       </ul>
     </div>
   </section>
 
-  <section id="projects">
+  <section id="projects" class="fade">
     <h2>Key Projects</h2>
-    <div class="projects">
-
-      <div class="card">
-        <img src="images/credit-collection.jpg" alt="Credit and Collection System" style="width:100%; border-radius:8px; margin-bottom:15px;">
-        <h3>Credit and Collection System</h3>
-        <p><strong>Description:</strong> Enterprise web-based system designed to manage client billing, payments, penalties, and reporting.</p>
-        <p><strong>Key Features & Functionality:</strong></p>
-        <ul>
-          <li>Centralized customer and payment records</li>
-          <li>Automated billing, balance tracking, and reports</li>
-          <li>Secure database and role-based access</li>
-        </ul>
+    <div class="grid">
+      <div class="card project-card">
+        <img src="images/credit-collection.jpg" alt="Credit and Collection System">
+        <h3>Credit & Collection System</h3>
+        <p>Enterprise web-based system for managing billing, payments, penalties, and reports.</p>
+        <span>Enterprise System</span>
       </div>
 
-      <div class="card" onclick="openModal('business-manager')" style="cursor: pointer;">
-        <img src="images/business-manager.jpg" alt="Business Manager App" style="width:100%; border-radius:8px; margin-bottom:15px;">
+      <div class="card project-card">
+        <img src="images/business-manager.jpg" alt="Business Manager App">
         <h3>Business Manager App</h3>
-        <p><strong>Description:</strong> Internal enterprise application for monitoring operations and supporting management decisions.</p>
-        <p><strong>Key Features & Functionality:</strong></p>
-        <ul>
-          <li>Operational dashboards and summaries</li>
-          <li>Centralized data access for managers</li>
-          <li>Improved visibility of business performance</li>
-        </ul>
-        <p style="color: #3b82f6; font-weight: 600;">Click to view more details</p>
+        <p>Internal dashboard-driven application supporting operational and management decisions.</p>
+        <span>Internal Application</span>
       </div>
 
-      <div class="card" onclick="openModal('chronicle-book')" style="cursor: pointer;">
-        <img src="images/chronicle-book.jpg" alt="The Chronicle Book Game" style="width:100%; border-radius:8px; margin-bottom:15px;">
+      <div class="card project-card">
+        <img src="images/chronicle-book.jpg" alt="The Chronicle Book Game">
         <h3>The Chronicle Book</h3>
-        <p><strong>Description:</strong> A 3D role-playing mobile game inspired by the Superbook series, developed as an educational tool for biblical learning.</p>
-        <p><strong>Key Features & Functionality:</strong></p>
-        <ul>
-          <li>Story-driven RPG gameplay with multiple stages</li>
-          <li>Educational content based on biblical stories</li>
-          <li>Interactive missions and character progression</li>
-        </ul>
-        <p style="color: #3b82f6; font-weight: 600;">Click to view more details</p>
+        <p>3D educational RPG inspired by biblical stories for interactive learning.</p>
+        <span>Game Development</span>
       </div>
-
     </div>
   </section>
 
-  <section>
-    <h2>Live Demos</h2>
-    <div class="projects">
-
-      <div class="card">
-        <h3>Credit and Collection System</h3>
-        <p><strong>Demo Access:</strong> Live demonstration of the billing, payment tracking, and reporting system.</p>
-        <p>
-          <a href="https://demo-credit-collection.example.com" target="_blank">▶ View Live Demo</a>
-        </p>
-        <p><em>Note: Demo credentials can be provided upon request.</em></p>
-      </div>
-
-      <div class="card">
-        <h3>Business Manager App</h3>
-        <p><strong>Demo Access:</strong> Interactive dashboard showcasing enterprise monitoring and management tools.</p>
-        <p>
-          <a href="https://demo-business-manager.example.com" target="_blank">▶ View Live Demo</a>
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>The Chronicle Book</h3>
-        <p><strong>Demo Access:</strong> Gameplay preview and walkthrough of the 3D educational RPG.</p>
-        <p>
-          <a href="https://demo-chronicle-book.example.com" target="_blank">▶ View Demo</a>
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <section id="contact" class="contact fade-in">
+  <section id="contact" class="fade">
     <h2>Contact</h2>
-    <form class="contact-form" id="contactForm">
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
-      <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-      <div class="form-feedback" id="formFeedback"></div>
-    </form>
-    <p>
-      <a href="https://www.linkedin.com/in/jonaer-casundo-a30737288" target="_blank">LinkedIn</a> |
+    <div class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button>Send Message</button>
+    </div>
+    <p style="margin-top:25px">
+      <a href="https://www.linkedin.com/in/jonaer-casundo-a30737288" target="_blank">LinkedIn</a> | 
       <a href="https://www.academia.edu/40342352/Chapter_" target="_blank">Thesis</a>
     </p>
   </section>
@@ -230,106 +273,21 @@
   © 2026 Jonaer Casundo • IT Manager Portfolio
 </footer>
 
-<!-- Modal Structure -->
-<div id="projectModal" class="modal">
-  <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
-    <div id="modalContent"></div>
-  </div>
-</div>
-
 <script>
-  // Intersection Observer for fade-in animations
-  const observer = new IntersectionObserver((entries) => {
+  const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-      }
+      if (entry.isIntersecting) entry.target.classList.add('show');
     });
-  });
+  }, { threshold: 0.15 });
 
-  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  document.querySelectorAll('.fade').forEach(el => observer.observe(el));
 
-  // Modal functionality
-  function openModal(project) {
-    const modal = document.getElementById('projectModal');
-    const content = document.getElementById('modalContent');
-    let modalHTML = '';
-
-    if (project === 'credit-collection') {
-      modalHTML = `
-        <h2>Credit and Collection System</h2>
-        <img src="images/credit-collection.jpg" alt="Credit and Collection System" style="width:100%; border-radius:8px; margin-bottom:15px;">
-        <p><strong>Description:</strong> Enterprise web-based system designed to manage client billing, payments, penalties, and reporting.</p>
-        <p><strong>Key Features & Functionality:</strong></p>
-        <ul>
-          <li>Centralized customer and payment records</li>
-          <li>Automated billing, balance tracking, and reports</li>
-          <li>Secure database and role-based access</li>
-        </ul>
-        <p><strong>Demo Access:</strong> <a href="https://demo-credit-collection.example.com" target="_blank">▶ View Live Demo</a></p>
-        <p><em>Note: Demo credentials can be provided upon request.</em></p>
-      `;
-    } else if (project === 'business-manager') {
-      modalHTML = `
-        <h2>Business Manager App</h2>
-        <img src="images/business-manager.jpg" alt="Business Manager App" style="width:100%; border-radius:8px; margin-bottom:15px;">
-        <p><strong>Description:</strong> Internal enterprise application for monitoring operations and supporting management decisions.</p>
-        <p><strong>Key Features & Functionality:</strong></p>
-        <ul>
-          <li>Operational dashboards and summaries</li>
-          <li>Centralized data access for managers</li>
-          <li>Improved visibility of business performance</li>
-        </ul>
-        <p><strong>Demo Access:</strong> <a href="https://demo-business-manager.example.com" target="_blank">▶ View Live Demo</a></p>
-      `;
-    } else if (project === 'chronicle-book') {
-      modalHTML = `
-        <h2>The Chronicle Book</h2>
-        <img src="images/chronicle-book.jpg" alt="The Chronicle Book Game" style="width:100%; border-radius:8px; margin-bottom:15px;">
-        <p><strong>Description:</strong> A 3D role-playing mobile game inspired by the Superbook series, developed as an educational tool for biblical learning.</p>
-        <p><strong>Key Features & Functionality:</strong></p>
-        <ul>
-          <li>Story-driven RPG gameplay with multiple stages</li>
-          <li>Educational content based on biblical stories</li>
-          <li>Interactive missions and character progression</li>
-        </ul>
-        <p><strong>Demo Access:</strong> <a href="https://demo-chronicle-book.example.com" target="_blank">▶ View Demo</a></p>
-      `;
-    }
-
-    content.innerHTML = modalHTML;
-    modal.style.display = 'block';
-  }
-
-  function closeModal() {
-    document.getElementById('projectModal').style.display = 'none';
-  }
-
-  // Close modal when clicking outside
-  window.onclick = function(event) {
-    const modal = document.getElementById('projectModal');
-    if (event.target === modal) {
-      modal.style.display = 'none';
-    }
-  }
-
-  // Smooth scrolling for navigation
-  document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+  document.querySelectorAll('nav a').forEach(link => {
+    link.addEventListener('click', e => {
       e.preventDefault();
-      const target = document.querySelector(this.getAttribute('href'));
-      target.scrollIntoView({ behavior: 'smooth' });
+      document.querySelector(link.getAttribute('href'))
+        .scrollIntoView({ behavior: 'smooth' });
     });
-  });
-
-  // Contact form handling
-  document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    const feedback = document.getElementById('formFeedback');
-    feedback.textContent = 'Thank you for your message! I will get back to you soon.';
-    feedback.style.color = '#10b981';
-    this.reset();
   });
 </script>
 
