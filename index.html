@@ -163,6 +163,34 @@
       gap: 26px;
     }
 
+
+    /* CORE SKILLS – EXPANDABLE */
+    .skill-card {
+      cursor: pointer;
+    }
+    
+    .skill-tags {
+      margin-top: 14px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .4s ease;
+    }
+    
+    .skill-card.active .skill-tags {
+      max-height: 300px;
+    }
+    
+    .skill-tags span {
+      background: var(--primary-soft);
+      color: var(--primary);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: .8rem;
+      font-weight: 500;
+    }
     /* CARD */
     .card {
       background: var(--card);
@@ -272,15 +300,85 @@
     </p>
   </section>
 
-  <section class="fade">
-    <h2>Core Skills</h2>
-    <div class="grid">
-      <div class="card"><h3>IT Leadership</h3><p>IT Strategy, Team Leadership, Project & Vendor Management</p></div>
-      <div class="card"><h3>Infrastructure</h3><p>Network Design, Server Administration, CCTV & Access Control</p></div>
-      <div class="card"><h3>Software Systems</h3><p>Web Applications, Databases, Centralized Enterprise Systems</p></div>
-      <div class="card"><h3>Security</h3><p>Data Protection, IT Security Fundamentals, System Reliability</p></div>
+<section class="fade">
+  <h2>Core Skills</h2>
+  <div class="grid">
+
+    <!-- IT LEADERSHIP -->
+    <div class="card skill-card">
+      <h3>IT Leadership</h3>
+      <p>Strategy, Governance & Team Management</p>
+
+      <div class="skill-tags">
+        <span>SDLC</span>
+        <span>Scrum</span>
+        <span>Agile Methodologies</span>
+        <span>Project Management</span>
+        <span>Vendor Management</span>
+        <span>Coaching & Mentorship</span>
+        <span>IT Budget Allocation</span>
+        <span>Resource Planning</span>
+        <span>Risk Management</span>
+      </div>
     </div>
-  </section>
+
+    <!-- INFRASTRUCTURE -->
+    <div class="card skill-card">
+      <h3>Infrastructure</h3>
+      <p>Network, Server & Physical Systems Design</p>
+
+      <div class="skill-tags">
+        <span>Internal Network Connectivity</span>
+        <span>Network Design & Architecture</span>
+        <span>Point-to-Point WiFi</span>
+        <span>Multi-Point WiFi Infrastructure</span>
+        <span>Server Design & Deployment</span>
+        <span>CCTV System Design</span>
+        <span>Access Control Systems</span>
+        <span>Smart Home Automation</span>
+        <span>Structured Cabling</span>
+      </div>
+    </div>
+
+    <!-- SOFTWARE DEVELOPMENT -->
+    <div class="card skill-card">
+      <h3>Software Development & Integration</h3>
+      <p>Enterprise & Web-Based Applications</p>
+
+      <div class="skill-tags">
+        <span>PHP</span>
+        <span>Laravel</span>
+        <span>MySQL</span>
+        <span>JavaScript</span>
+        <span>Bootstrap</span>
+        <span>Tailwind</span>
+        <span>Node.js</span>
+        <span>TypeScript</span>
+        <span>C#</span>
+        <span>.NET</span>
+        <span>OpenAI API Integration</span>
+        <span>Twilio</span>
+      </div>
+    </div>
+
+    <!-- SECURITY -->
+    <div class="card skill-card">
+      <h3>Security</h3>
+      <p>Protection, Reliability & Risk Reduction</p>
+
+      <div class="skill-tags">
+        <span>Data Protection</span>
+        <span>System Hardening</span>
+        <span>Access Control Policies</span>
+        <span>Backup & Recovery</span>
+        <span>Basic Network Security</span>
+        <span>System Reliability</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 
   <section id="experience" class="experience fade">
     <h2>Professional Experience</h2>
@@ -375,19 +473,13 @@
         </a>
       </p>
     </div>
-
   </div>
-
 </section>
-
-
-
 </div>
 
 <footer>
   © 2026 Jonaer Casundo • IT Manager Portfolio
 </footer>
-
 <script>
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
@@ -450,7 +542,13 @@
     location.reload();
   }
 </script>
-
+<script>
+  document.querySelectorAll('.skill-card').forEach(card => {
+    card.addEventListener('click', () => {
+      card.classList.toggle('active');
+    });
+  });
+</script>
 
 </body>
   <!-- Success Modal -->
@@ -462,6 +560,7 @@
   </div>
 </div>
 </html>
+
 
 
 
