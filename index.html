@@ -1,704 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Jonaer Casundo",
-      "url": "https://jonaercasundo.github.io/",
-      "sameAs": [
-        "https://www.facebook.com/YOUR_PROFILE",
-        "https://github.com/jonaercasundo",
-        "https://www.linkedin.com/in/YOUR_LINKEDIN"
-      ]
-    }
-  </script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jonaer Casundo | IT Manager Portfolio</title>
-  <link rel="canonical" href="https://jonaercasundo.github.io/">
-  <!-- SEO -->
-  <meta name="description" content="Jonaer Casundo – IT Manager, MIS Professional, Full Stack Developer. Portfolio showcasing enterprise systems, leadership, and projects." />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jonaer Casundo | Web Developer & Business Process Automation</title>
+<meta name="description" content="Jonaer Casundo is a web developer who replaces manual office work with automated workflows, internal systems and API integrations.">
+<link rel="canonical" href="https://jonaercasundo.github.io/">
+<meta name="theme-color" content="#2d59ff">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Jonaer Casundo | Web Developer & Business Process Automation">
+<meta property="og:description" content="Internal tools, approval workflows and API integrations that replace manual office work.">
+<meta property="og:url" content="https://jonaercasundo.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%9A%99%EF%B8%8F%3C/text%3E%3C/svg%3E">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Jonaer Casundo","url":"https://jonaercasundo.github.io/","jobTitle":"Web Developer","knowsAbout":["Laravel","PHP","Business process automation","API integration","OpenAI API","Twilio"],"sameAs":["https://github.com/jonaercasundo","https://www.linkedin.com/in/jonaer-casundo-a30737288"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#f3f6fb; --surface:rgba(255,255,255,0.8); --ink:#111b33; --muted:#53627d; --line:rgba(93,110,148,0.18);
+  --signal:#2d59ff; --signal-ink:#f5f8ff; --hand:#9a4d00; --hand-bg:#fff1df; --auto-bg:#e9efff;
+  --shadow:0 18px 50px rgba(22,28,52,0.10); --display:'Bricolage Grotesque',system-ui,sans-serif; --body:'IBM Plex Sans',system-ui,sans-serif;
+}
+@media(prefers-color-scheme:dark){:root{
+  --paper:#0d1524; --surface:rgba(19,28,44,0.82); --ink:#edf5ff; --muted:#a6b6d8; --line:rgba(131,152,199,0.18);
+  --signal:#8aa8ff; --signal-ink:#0d1524; --hand:#f4c077; --hand-bg:rgba(112,74,14,0.38); --auto-bg:rgba(80,108,199,0.22); --shadow:0 24px 60px rgba(2,6,20,0.45);
+}}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{position:relative;isolation:isolate;min-height:100vh;background:
+  radial-gradient(circle at 15% 10%, rgba(85,129,255,0.22), transparent 26%),
+  radial-gradient(circle at 80% 12%, rgba(255,153,77,0.16), transparent 22%),
+  linear-gradient(180deg, rgba(255,255,255,0.55) 0%, rgba(243,246,251,0.95) 20%, var(--paper) 100%);
+  color:var(--ink);font:400 1.05rem/1.65 var(--body);letter-spacing:-.01em}
+body::before,body::after{content:"";position:fixed;pointer-events:none;filter:blur(40px);z-index:-1;opacity:.8;animation:drift 16s ease-in-out infinite alternate}
+body::before{width:26rem;height:26rem;top:-7rem;left:-6rem;background:rgba(111,146,255,0.18)}
+body::after{width:22rem;height:22rem;right:-5rem;bottom:-6rem;background:rgba(255,165,92,0.18);animation-delay:2s}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--signal);outline-offset:3px;border-radius:4px}
+.wrap{position:relative;z-index:1;max-width:1080px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--display);line-height:1.05;letter-spacing:-.04em}
+.skip{position:absolute;left:12px;top:-60px;z-index:50;background:var(--signal);color:var(--signal-ink);padding:10px 16px;border-radius:10px;font-weight:600;text-decoration:none;transition:top .2s}
+.skip:focus{top:10px}
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+.bar{position:sticky;top:0;z-index:20;backdrop-filter:blur(12px);background:rgba(243,246,251,0.72);border-bottom:1px solid var(--line)}
+@media(prefers-color-scheme:dark){.bar{background:rgba(13,21,36,0.72)}}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font:700 1.1rem var(--display);text-decoration:none;letter-spacing:-.04em}
+.bar nav{display:flex;gap:22px;font-size:.95rem}
+.bar nav a{text-decoration:none;color:var(--muted);transition:color .2s ease;padding:4px 0}
+.bar nav a:hover{color:var(--ink)}
+.bar nav a.act{color:var(--ink);box-shadow:0 2px 0 var(--signal)}
 
-  <style>
-    .doc-button {
-      display: inline-block;
-      margin-top: 16px;
-      padding: 12px 20px;
-      background: var(--primary);
-      color: white;
-      border-radius: 10px;
-      font-size: .9rem;
-      font-weight: 600;
-      transition: transform .2s ease, background .3s ease;
-    }
-    
-    .doc-button:hover {
-      background: #1d4ed8;
-      transform: translateY(-2px);
-    }
+.hero{padding:72px 0 80px}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(2.6rem,6vw,4.3rem);font-weight:800;background:linear-gradient(135deg,var(--ink) 0%,#1d3cba 28%,#4c7afd 62%,#ea7316 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .lede{margin-top:22px;color:var(--muted);max-width:52ch;font-size:1.08rem}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{display:inline-block;padding:13px 22px;border-radius:12px;font-weight:600;text-decoration:none;border:1px solid transparent;background:linear-gradient(135deg,var(--signal),#5b78ff);color:var(--signal-ink);box-shadow:0 14px 32px rgba(45,89,255,0.24);transition:transform .2s ease, box-shadow .2s ease, filter .2s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(45,89,255,0.28);filter:saturate(1.05)}
+.btn:disabled{opacity:.6;cursor:wait;transform:none}
+.btn.ghost{background:transparent;color:var(--ink);border-color:rgba(17,27,51,0.12);box-shadow:none}
+.btn.ghost:hover{background:rgba(17,27,51,0.02);border-color:rgba(17,27,51,0.2)}
 
-    .contact-info p {
-      margin-bottom: 16px;
-      font-size: .95rem;
-      color: var(--text-muted);
-    }
-    
-    .contact-info a {
-      word-break: break-all;
-    }
-    .experience .card {
-      margin-bottom: 2rem;
-    }
-    /* MODAL */
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(15, 23, 42, 0.6);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity .3s ease;
-      z-index: 9999;
-    }
-    
-    .modal.show {
-      opacity: 1;
-      pointer-events: auto;
-    }
-    
-    .modal-content {
-      background: white;
-      padding: 30px;
-      border-radius: 14px;
-      text-align: center;
-      max-width: 380px;
-      box-shadow: var(--shadow-md);
-      animation: scaleIn .3s ease;
-    }
-    
-    .modal-content h3 {
-      margin-bottom: 10px;
-      color: var(--primary);
-    }
-    
-    .modal-content p {
-      font-size: .95rem;
-      color: var(--text-muted);
-      margin-bottom: 20px;
-    }
-    
-    .modal-content button {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 12px 26px;
-      border-radius: 10px;
-      cursor: pointer;
-      font-size: .9rem;
-    }
-    
-    .modal-content button:hover {
-      background: #1d4ed8;
-    }
-    
-    @keyframes scaleIn {
-      from { transform: scale(.9); opacity: 0; }
-      to { transform: scale(1); opacity: 1; }
-    }
+.flow{background:linear-gradient(180deg, rgba(255,255,255,0.68), rgba(255,255,255,0.92));border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow);backdrop-filter:blur(12px);animation:floatCard 7s ease-in-out infinite}
+.flow-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:18px}
+.flow-head b{font-family:var(--display);font-size:1.08rem;letter-spacing:-.02em}
+.switch{display:flex;border:1px solid var(--line);border-radius:999px;padding:3px;background:rgba(17,27,51,0.04)}
+.switch button{border:0;background:none;color:var(--muted);font:600 .84rem var(--body);padding:7px 14px;border-radius:999px;cursor:pointer;transition:all .18s ease}
+.switch button[aria-pressed=true]{background:linear-gradient(135deg,var(--ink),#273a6b);color:var(--paper)}
+.steps{list-style:none;position:relative}
+.steps li{display:flex;gap:14px;align-items:flex-start;padding:12px 0;position:relative}
+.steps li:not(:last-child)::after{content:"";position:absolute;left:13px;top:42px;bottom:-12px;width:2px;background:linear-gradient(180deg,rgba(98,115,153,0.3),rgba(98,115,153,0.08))}
+.dot{flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;font-size:.8rem;font-weight:600;background:var(--hand-bg);color:var(--hand);transition:background .3s,color .3s,transform .3s ease;box-shadow:inset 0 0 0 1px rgba(154,77,0,0.08)}
+.steps span.t{transition:opacity .25s;display:block;color:var(--ink);font-weight:500}
+.flow.auto .dot{background:var(--auto-bg);color:var(--signal)}
+.flow.swap .t{opacity:0}
+.flow.playing .steps li{opacity:.35;transition:opacity .4s ease}
+.flow.playing .steps li.on{opacity:1}
+.flow.playing .steps li.on .dot{transform:scale(1.15)}
+.flow-foot{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);font-size:.92rem;color:var(--muted);min-height:42px}
 
-    :root {
-      --bg: #f8fafc;
-      --card: #ffffff;
-      --primary: #2563eb;
-      --primary-soft: #dbeafe;
-      --text-main: #0f172a;
-      --text-muted: #475569;
-      --border: #e5e7eb;
-      --radius: 14px;
-      --shadow-sm: 0 4px 12px rgba(0,0,0,.05);
-      --shadow-md: 0 12px 30px rgba(0,0,0,.08);
-    }
+section{padding:72px 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(1.9rem,3.2vw,2.5rem);font-weight:700;margin-bottom:34px}
 
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
-    body { background: var(--bg); color: var(--text-main); line-height: 1.7; }
-    img { max-width: 100%; display: block; }
-    a { color: var(--primary); text-decoration: none; font-weight: 500; }
+.case{display:grid;grid-template-columns:1fr 1fr;gap:32px;padding:34px 0;border-bottom:1px solid var(--line);align-items:center;transition:transform .25s ease}
+.case:hover{transform:translateY(-2px)}
+.case:first-of-type{padding-top:0}
+.case:nth-of-type(even) .shot{order:2}
+.shot{background:var(--surface);border:1px solid var(--line);border-radius:18px;aspect-ratio:16/10;overflow:hidden;box-shadow:var(--shadow);transition:box-shadow .25s ease, transform .25s ease}
+.shot:hover{transform:translateY(-2px)}
+.shot img,.shot video{width:100%;height:100%;object-fit:cover;display:block}
+.shot.empty{display:grid;place-items:center;background:linear-gradient(135deg,var(--auto-bg),var(--hand-bg))}
+.shot.empty::after{content:"Preview coming soon";color:var(--muted);font-weight:500;font-size:.95rem}
+.case h3{font-size:1.55rem;margin-bottom:10px}
+.case p{color:var(--muted);max-width:58ch}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;list-style:none}
+.chips li{background:linear-gradient(135deg, rgba(45,89,255,0.11), rgba(45,89,255,0.03));color:var(--signal);padding:5px 12px;border-radius:999px;font-size:.82rem;font-weight:600;border:1px solid rgba(45,89,255,0.12)}
 
-    /* HEADER */
-    header {
-      background: linear-gradient(135deg, #1e3a8a, #2563eb);
-      color: white;
-      padding: 90px 20px 70px;
-      text-align: center;
-    }
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:34px 40px}
+.skills > div{background:rgba(255,255,255,0.12);border:1px solid var(--line);border-radius:18px;padding:22px 20px;box-shadow:0 8px 18px rgba(17,27,51,0.02);transition:transform .2s ease, border-color .2s ease}
+.skills > div:hover{transform:translateY(-2px);border-color:rgba(45,89,255,0.2)}
+.skills h3{font-size:1.17rem;margin-bottom:6px}
+.skills p{color:var(--muted);font-size:.95rem;margin-bottom:10px}
+.skills .chips{margin-top:0}
 
-    header h1 { font-size: clamp(2.4rem, 5vw, 3.5rem); font-weight: 800; }
-    header p { margin-top: 12px; font-size: 1.15rem; opacity: .9; }
+.job{display:grid;grid-template-columns:170px 1fr;gap:24px;padding:22px 0;border-bottom:1px solid var(--line);transition:transform .2s ease}
+.job:hover{transform:translateX(2px)}
+.job time{color:var(--muted);font-size:.92rem}
+.job h3{font-size:1.22rem}
+.job .co{font-weight:600;margin-bottom:8px}
+.job ul{padding-left:18px;color:var(--muted);font-size:.97rem}
+.job li{margin-bottom:6px}
 
-    nav {
-      margin-top: 35px;
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
-    }
+.docs{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:34px}
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+form label{display:block;font-weight:500;font-size:.92rem;margin-bottom:4px}
+form input,form textarea{width:100%;padding:12px;margin-bottom:16px;border:1px solid var(--line);border-radius:12px;background:rgba(255,255,255,0.52);color:var(--ink);font:inherit;transition:border-color .2s ease, box-shadow .2s ease}
+form input:focus,form textarea:focus{outline:none;border-color:rgba(45,89,255,0.5);box-shadow:0 0 0 4px rgba(45,89,255,0.08)}
+form button{cursor:pointer;font:inherit;font-weight:600}
+#formStatus{margin-top:12px;font-size:.92rem}
+#formStatus:not(:empty){padding:10px 14px;border-radius:10px;background:var(--auto-bg)}
+.links{list-style:none}
+.links li{padding:12px 0;border-bottom:1px solid var(--line)}
+.links small{display:block;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;font-size:.72rem;margin-bottom:3px}
+.links a{font-weight:500;position:relative}
+.links a::after{content:"";position:absolute;left:0;bottom:-2px;width:100%;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .2s ease;opacity:.55}
+.links a:hover::after{transform:scaleX(1)}
+footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.9rem}
 
-    nav a {
-      color: white;
-      opacity: .9;
-      padding-bottom: 4px;
-      border-bottom: 2px solid transparent;
-      transition: all .3s;
-    }
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s ease,transform .6s ease}
+.rv.in{opacity:1;transform:none}
 
-    nav a:hover {
-      opacity: 1;
-      border-color: white;
-    }
+@keyframes drift{0%{transform:translate3d(0,0,0) scale(1)}100%{transform:translate3d(18px,-22px,0) scale(1.1)}}
+@keyframes floatCard{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
 
-    /* LAYOUT */
-    .container { max-width: 1200px; margin: auto; padding: 80px 20px; }
-    section { margin-bottom: 90px; }
-
-    section h2 {
-      font-size: 2.1rem;
-      margin-bottom: 35px;
-      position: relative;
-      padding-left: 18px;
-    }
-
-    section h2::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 10px;
-      height: 60%;
-      width: 5px;
-      background: var(--primary);
-      border-radius: 10px;
-    }
-
-    /* ABOUT */
-    .about p { max-width: 850px; font-size: 1.05rem; color: var(--text-muted); }
-
-    /* GRID */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 26px;
-    }
-
-    /* SKILL CARD CTA */
-    .skill-toggle {
-      margin-top: 14px;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: .85rem;
-      font-weight: 600;
-      color: var(--primary);
-      background: transparent;
-      border: none;
-      cursor: pointer;
-      padding: 0;
-    }
-    
-    .skill-toggle span {
-      transition: transform .3s ease;
-    }
-    
-    .skill-card.active .skill-toggle span {
-      transform: rotate(180deg);
-    }
-    
-    /* Visual hint on hover */
-    .skill-card:hover .skill-toggle {
-      text-decoration: underline;
-    }
-    
-    /* Smooth open animation improvement */
-    .skill-card.active {
-      outline: 2px solid rgba(37, 99, 235, 0.15);
-    }
-
-    /* CORE SKILLS – EXPANDABLE */
-    .skill-card {
-      cursor: pointer;
-    }
-    
-    .skill-tags {
-      margin-top: 14px;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height .4s ease;
-    }
-    
-    .skill-card.active .skill-tags {
-      max-height: 300px;
-    }
-    
-    .skill-tags span {
-      background: var(--primary-soft);
-      color: var(--primary);
-      padding: 6px 12px;
-      border-radius: 999px;
-      font-size: .8rem;
-      font-weight: 500;
-    }
-    /* CARD */
-    .card {
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 26px;
-      box-shadow: var(--shadow-sm);
-      transition: transform .35s ease, box-shadow .35s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-8px);
-      box-shadow: var(--shadow-md);
-    }
-
-    .card h3 { color: var(--primary); margin-bottom: 10px; font-size: 1.2rem; }
-    .card p, .card li { color: var(--text-muted); font-size: .96rem; }
-    .card ul { margin-top: 12px; padding-left: 18px; }
-    .card li { margin-bottom: 8px; }
-
-    /* EXPERIENCE */
-    .experience .card { border-left: 6px solid var(--primary); }
-
-    /* PROJECTS */
-    .project-card img {
-      border-radius: 10px;
-      margin-bottom: 15px;
-    }
-
-    .project-card span {
-      display: inline-block;
-      margin-top: 12px;
-      color: var(--primary);
-      font-weight: 600;
-    }
-
-    /* CONTACT */
-    .contact-form {
-      max-width: 520px;
-      background: var(--card);
-      padding: 35px;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow-sm);
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-      width: 100%;
-      padding: 14px;
-      margin-bottom: 16px;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-      font-size: .95rem;
-    }
-
-    .contact-form button {
-      background: var(--primary);
-      color: white;
-      padding: 14px 26px;
-      border-radius: 10px;
-      border: none;
-      font-size: .95rem;
-      cursor: pointer;
-      transition: transform .2s ease, background .3s ease;
-    }
-
-    .contact-form button:hover { background: #1d4ed8; transform: translateY(-2px); }
-
-    /* FOOTER */
-    footer {
-      background: white;
-      text-align: center;
-      padding: 40px 20px;
-      border-top: 1px solid var(--border);
-      color: #64748b;
-      font-size: .9rem;
-    }
-
-    /* ANIMATION */
-    .fade { opacity: 0; transform: translateY(25px); transition: all .7s ease; }
-    .fade.show { opacity: 1; transform: translateY(0); }
-
-    @media(max-width: 768px) {
-      header { padding: 70px 20px 55px; }
-      section h2 { font-size: 1.8rem; }
-    }
-  </style>
+@media(prefers-color-scheme:dark){
+  body{background:radial-gradient(circle at 15% 10%,rgba(85,129,255,0.18),transparent 26%),radial-gradient(circle at 80% 12%,rgba(255,153,77,0.10),transparent 22%),var(--paper)}
+  .flow{background:linear-gradient(180deg,rgba(26,38,60,.8),rgba(19,28,44,.92))}
+  .switch{background:rgba(255,255,255,.06)}
+  .switch button[aria-pressed=true]{background:var(--signal);color:var(--signal-ink)}
+  .hero h1{background:linear-gradient(135deg,#edf5ff 0%,#8aa8ff 55%,#ffb36b 100%);-webkit-background-clip:text;background-clip:text}
+  form input,form textarea{background:rgba(255,255,255,.06)}
+  .btn.ghost{border-color:rgba(237,245,255,.22)}
+  .btn.ghost:hover{background:rgba(255,255,255,.06);border-color:rgba(237,245,255,.4)}
+  .skills>div{background:rgba(255,255,255,.03)}
+}
+@media(max-width:820px){
+  .hero .wrap,.case,.skills,.contact,.job{grid-template-columns:1fr}
+  .case:nth-of-type(even) .shot{order:0}
+  .bar nav{gap:14px;font-size:.88rem}
+  .hero{padding-top:44px}
+  .flow{animation:none}
+}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important;animation:none!important}.rv{opacity:1;transform:none}}
+</style>
 </head>
 <body>
+<a class="skip" href="#work">Skip to content</a>
 
-<header>
-  <h1>Jonaer Casundo</h1>
-  <p>IT Manager • MIS Professional • Full Stack Developer</p>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#experience">Experience</a>
-    <a href="#documents">Documents</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header class="bar">
+  <div class="wrap">
+    <a class="brand" href="#top">Jonaer Casundo</a>
+    <nav aria-label="Main">
+      <a href="#work">Work</a><a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+    </nav>
+  </div>
 </header>
 
-<div class="container">
-
-  <section id="about" class="about fade">
-    <h2>About Me</h2>
-    <p>
-      Results-driven IT Manager with proven experience leading enterprise IT operations, infrastructure, and software development. Strong background in aligning technology with business goals, managing teams, and delivering secure, scalable systems including centralized platforms, CCTV infrastructure, and web-based applications.
-    </p>
-  </section>
-
-<section class="fade">
-  <h2>Core Skills</h2>
-  <p style="color:var(--text-muted); max-width:720px; margin-bottom:30px;">
-  Click each category to view detailed tools, technologies, and competencies.
-</p>
-  <div class="grid">
-
-    <!-- IT LEADERSHIP -->
-    <div class="card skill-card">
-      <h3>IT Leadership</h3>
-      <p>Strategy, Governance & Team Management</p>
-      <button class="skill-toggle" type="button">
-        View Skills <span>▼</span>
-      </button>
-      <div class="skill-tags">
-        <span>SDLC</span>
-        <span>Scrum</span>
-        <span>Agile Methodologies</span>
-        <span>Project Management</span>
-        <span>Vendor Management</span>
-        <span>Coaching & Mentorship</span>
-        <span>IT Budget Allocation</span>
-        <span>Resource Planning</span>
-        <span>Risk Management</span>
+<main id="top">
+<div class="hero">
+  <div class="wrap">
+    <div>
+      <h1>I replace manual office work with systems that run on their own.</h1>
+      <p class="lede">I'm a web developer in the Philippines. I build internal tools, approval workflows and integrations that cut retyping, chasing and month-end scrambling for operations teams.</p>
+      <div class="cta">
+        <a class="btn" href="#contact">Talk about your process</a>
+        <a class="btn ghost" href="Jonaer_Casundo_Resume.pdf" download>Download resume</a>
       </div>
     </div>
 
-    <!-- INFRASTRUCTURE -->
-    <div class="card skill-card">
-      <h3>Infrastructure</h3>
-      <p>Network, Server & Physical Systems Design</p>
-      <button class="skill-toggle" type="button">
-        View Skills <span>▼</span>
-      </button>
-      <div class="skill-tags">
-        <span>Internal Network Connectivity</span>
-        <span>Network Design & Architecture</span>
-        <span>Point-to-Point WiFi</span>
-        <span>Multi-Point WiFi Infrastructure</span>
-        <span>Server Design & Deployment</span>
-        <span>CCTV System Design</span>
-        <span>Access Control Systems</span>
-        <span>Smart Home Automation</span>
-        <span>Structured Cabling</span>
+    <div class="flow" id="flow" aria-live="polite">
+      <div class="flow-head">
+        <b>One request, two ways</b>
+        <div class="switch" role="group" aria-label="Process mode">
+          <button type="button" data-mode="manual" aria-pressed="true">By hand</button>
+          <button type="button" data-mode="auto" aria-pressed="false">Automated</button>
+        </div>
       </div>
-    </div>
-
-    <!-- SOFTWARE DEVELOPMENT -->
-    <div class="card skill-card">
-      <h3>Software Development & Integration</h3>
-      <p>Enterprise & Web-Based Applications</p>
-      <button class="skill-toggle" type="button">
-        View Skills <span>▼</span>
-      </button>
-      <div class="skill-tags">
-        <span>PHP</span>
-        <span>Laravel</span>
-        <span>MySQL</span>
-        <span>JavaScript</span>
-        <span>Bootstrap</span>
-        <span>Tailwind</span>
-        <span>Node.js</span>
-        <span>TypeScript</span>
-        <span>C#</span>
-        <span>.NET</span>
-        <span>OpenAI API Integration</span>
-        <span>Twilio</span>
-      </div>
-    </div>
-
-    <!-- SECURITY -->
-    <div class="card skill-card">
-      <h3>Security</h3>
-      <p>Protection, Reliability & Risk Reduction</p>
-      <button class="skill-toggle" type="button">
-        View Skills <span>▼</span>
-      </button>
-      <div class="skill-tags">
-        <span>Data Protection</span>
-        <span>System Hardening</span>
-        <span>Access Control Policies</span>
-        <span>Backup & Recovery</span>
-        <span>Basic Network Security</span>
-        <span>System Reliability</span>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-  <section id="experience" class="experience fade">
-    <h2>Professional Experience</h2>
-  
-    <div class="card">
-      <h3>MIS Officer / IT Lead</h3>
-      <p><strong>Southspring Development Corporation</strong> | 2023 – 2026</p>
-      <ul>
-        <li>Led enterprise IT operations across infrastructure, systems, and end-user support.</li>
-        <li>Designed and deployed credit and collection systems, improving reporting accuracy and operational efficiency.</li>
-        <li>Implemented centralized database architectures and enterprise-level CCTV solutions.</li>
-        <li>Managed technology vendors, budgets, and long-term IT roadmaps.</li>
-      </ul>
-    </div>
-  
-    <div class="card">
-      <h3>Technology & Systems Development (Project-Based)</h3>
-      <p><strong>Sedge Corporation</strong> | 2022 – 2023</p>
-      <ul>
-        <li>Designed and developed a Credit and Collection Program to support structured financial operations and reporting.</li>
-        <li>Provided technical and systems expertise in support of Research and Development initiatives within the agriculture technology sector.</li>
-        <li>Contributed to the preparation and documentation of project proposals focused on modern and advanced agricultural farming technologies.</li>
-        <li>Ensured proposed technology solutions were aligned with the strategic objectives of Brunei Vision 2035 (Wawasan Brunei 2035).</li>
-      </ul>
-    </div>
-
-    <div class="card">
-      <h3>Payment Officer</h3>
-      <p><strong>1D Manpower</strong> | Casino Operations | 2019 – 2021</p>
-      <ul>
-        <li>Handled the collection, verification, and reconciliation of player payments in accordance with established credit and collection procedures.</li>
-        <li>Monitored payment transactions to ensure accuracy, completeness, and timely settlement of outstanding balances.</li>
-        <li>Maintained detailed payment records and reports to support financial reconciliation, audit requirements, and credit control processes.</li>
-        <li>Ensured compliance with internal financial controls, operational policies, and confidentiality standards.</li>
-      </ul>
-    </div>
-  </section>
-  <section id="documents" class="fade">
-  <h2>Documents</h2>
-
-  <div class="grid" style="max-width:900px;">
-
-    <div class="card">
-      <h3>Cover Letter</h3>
-      <p>
-        A professional cover letter outlining my background, leadership experience,
-        and alignment with enterprise IT and business objectives.
-      </p>
-      <a href="Jonaer_Casundo_Cover_Letter.pdf" 
-         class="doc-button" 
-         download>
-        📄 Download Cover Letter
-      </a>
-    </div>
-
-    <div class="card">
-      <h3>Resume</h3>
-      <p>
-        A detailed resume highlighting my professional experience, technical expertise,
-        leadership roles, and key projects.
-      </p>
-      <a href="Jonaer_Casundo_Resume.pdf" 
-         class="doc-button" 
-         download>
-        📄 Download Resume
-      </a>
-    </div>
-
-  </div>
-</section>
-
-  <section id="projects" class="fade">
-    <h2>Key Projects</h2>
-    <div class="grid">
-      <div class="card project-card">
-        <img src="creditAndCollection.png" alt="Credit and Collection System">
-        <h3>Credit & Collection System</h3>
-        <p>Enterprise web-based system for managing billing, payments, penalties, and reports.</p>
-        <span>Enterprise System</span>
-      </div>
-
-      <div class="card project-card">
-        <img src="businessManagerApp.png" alt="Business Manager App">
-        <h3>Business Manager App</h3>
-        <p>Internal dashboard-driven application supporting operational and management decisions.</p>
-        <span>Internal Application</span>
-      </div>
-
-      <div class="card project-card">
-        <img src="chronicleBook.png" alt="The Chronicle Book Game">
-        <h3>The Chronicle Book</h3>
-        <p>3D educational RPG inspired by biblical stories for interactive learning.</p>
-        <span>Game Development</span>
-      </div>
-    </div>
-  </section>
-
-<section id="contact" class="fade">
-  <h2>Contact</h2>
-
-  <div class="grid" style="max-width:1100px;">
-
-    <!-- CONTACT FORM -->
-    <form class="contact-form" 
-          id="contactForm"
-          action="https://formspree.io/f/mpqdpnok" 
-          method="POST">
-
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-
-      <button type="submit">Send Message</button>
-      <p id="formStatus" style="margin-top:15px;font-size:.9rem;"></p>
-    </form>
-
-    <!-- CONTACT INFO -->
-    <div class="contact-info card">
-      <h3 style="color:var(--primary); margin-bottom:18px;">
-        Get in Touch
-      </h3>
-
-      <p>
-        📧 <strong>Email</strong><br>
-        <a href="mailto:jonaer.casundo@gmail.com">
-          jcasundo.sedge@gmail.com
-        </a>
-      </p>
-
-      <p>
-        📱 <strong>Mobile</strong><br>
-        <a href="tel:+639615362067">
-          +63 961 536 2067
-        </a>
-      </p>
-
-      <p>
-        💼 <strong>LinkedIn</strong><br>
-        <a href="https://www.linkedin.com/in/jonaer-casundo-a30737288" target="_blank">
-          linkedin.com/in/jonaer-casundo
-        </a>
-      </p>
-
-      <p>
-        💻 <strong>GitHub</strong><br>
-        <a href="https://github.com/jonaercasundo" target="_blank">
-          github.com/jonaercasundo
-        </a>
-      </p>
+      <ol class="steps">
+        <li><span class="dot">1</span><span class="t"></span></li>
+        <li><span class="dot">2</span><span class="t"></span></li>
+        <li><span class="dot">3</span><span class="t"></span></li>
+        <li><span class="dot">4</span><span class="t"></span></li>
+      </ol>
+      <p class="flow-foot" id="flowFoot"></p>
     </div>
   </div>
-</section>
 </div>
 
-<footer>
-  © 2026 Jonaer Casundo • IT Manager Portfolio
-</footer>
+<section id="work">
+  <div class="wrap">
+    <h2>Selected work</h2>
+
+    <article class="case">
+      <div class="shot"><video controls playsinline preload="metadata" aria-label="Automated business process and AI assistant demo" onerror="this.parentNode.classList.add('empty');this.remove()"><source src="Portfolio/Astra_Personal Assistant.mp4" type="video/mp4">Your browser does not support HTML video.</video></div>
+      <div>
+        <h3>Automated business process and AI assistant</h3>
+        <p>A Laravel platform that connects workflow rules, OpenAI and Twilio so routine tasks and customer messages go out without someone sending them.</p>
+        <ul class="chips"><li>Laravel</li><li>OpenAI API</li><li>Twilio SMS and voice</li></ul>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="shot"><img src="centralize_database.png" alt="Centralized Database interface" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"></div>
+      <div>
+        <h3>Centralized Database</h3>
+        <p>One place for product records, SKUs and stock lookups, with queries tuned so search stays fast as the catalog grows.</p>
+        <ul class="chips"><li>PHP</li><li>MySQL</li><li>Query optimization</li></ul>
+      </div>
+    </article>
+
+    <article class="case">
+      <div class="shot"><img src="delivery_tracker.png" alt="Delivery and Inventory Tracker dashboard" loading="lazy" onerror="this.parentNode.classList.add('empty');this.remove()"></div>
+      <div>
+        <h3>Delivery and Inventory Tracker</h3>
+        <p>A delivery and inventory tracker that shows what is in stock and what is on the road, so managers stop asking for status updates.</p>
+        <ul class="chips"><li>Dashboards</li><li>Inventory tracking</li><li>Logistics</li></ul>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="skills">
+  <div class="wrap">
+    <h2>What I work with</h2>
+    <div class="skills">
+      <div>
+        <h3>Web development</h3>
+        <p>Front end and back end applications.</p>
+        <ul class="chips"><li>PHP</li><li>Laravel</li><li>JavaScript</li><li>React</li><li>Tailwind</li><li>Bootstrap</li><li>MySQL</li><li>REST APIs</li></ul>
+      </div>
+      <div>
+        <h3>Business automation</h3>
+        <p>Mapping a process, then removing the manual steps.</p>
+        <ul class="chips"><li>Process mapping</li><li>Workflow automation</li><li>Business rules</li><li>Data validation</li><li>Reporting dashboards</li></ul>
+      </div>
+      <div>
+        <h3>Integrations</h3>
+        <p>Connecting the tools a team already uses.</p>
+        <ul class="chips"><li>OpenAI API</li><li>Twilio</li><li>SMS alerts</li><li>Voice alerts</li><li>Third-party APIs</li><li>Data sync</li></ul>
+      </div>
+      <div>
+        <h3>Support and delivery</h3>
+        <p>Shipping, testing and keeping it running.</p>
+        <ul class="chips"><li>Technical support</li><li>Troubleshooting</li><li>Testing</li><li>Documentation</li><li>Git and GitHub</li><li>Linux</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <h2>Experience</h2>
+
+    <div class="job">
+      <time>May 2026 – Present</time>
+      <div>
+        <h3>Technical Support / Web Developer</h3>
+        <p class="co">Metro-Mobilia Corporation</p>
+        <ul>
+          <li>Build and maintain web applications for business operations, import/export activity and internal process management.</li>
+          <li>Keep systems reliable and support users across departments.</li>
+          <li>Turn manual processes into digital workflows with fewer delays and more accurate data.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <time>Dec 2023 – Jan 2026</time>
+      <div>
+        <h3>MIS / Web Developer</h3>
+        <p class="co">South Spring Development Corporation</p>
+        <ul>
+          <li>Designed and deployed custom web applications for internal processes and operational reporting.</li>
+          <li>Built centralized systems for data management, inventory visibility and workflow tracking.</li>
+          <li>Structured IT asset management and operations systems for real estate teams.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <time>Aug 2022 – Dec 2023</time>
+      <div>
+        <h3>Software Engineer</h3>
+        <p class="co">Sedge Technology Corporation</p>
+        <ul>
+          <li>Developed web applications to coding standards, with testing and business-driven requirements.</li>
+          <li>Built automation and reporting features for financial work, including credit and collection workflows.</li>
+          <li>Coordinated implementation, documentation and client and vendor communication.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="job">
+      <time>Sep 2019 – Jan 2022</time>
+      <div>
+        <h3>Payment Officer</h3>
+        <p class="co">24/7, Northgate Alabang</p>
+        <ul>
+          <li>Processed payments with strict accuracy, compliance and reconciliation standards.</li>
+          <li>Monitored financial workflows for timely processing, documentation and reporting.</li>
+          <li>Kept payment records organized and improved process accuracy.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap">
+    <h2>Let's talk about what slows your team down</h2>
+    <div class="docs">
+      <a class="btn" href="Jonaer_Casundo_Resume.pdf" download>Download resume</a>
+      <a class="btn ghost" href="Jonaer_Casundo_Cover_Letter.pdf" download>Download cover letter</a>
+    </div>
+    <div class="contact">
+      <form id="contactForm" action="https://formspree.io/f/mpqdpnok" method="POST">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" aria-hidden="true" style="display:none">
+        <label for="name">Your name</label>
+        <input id="name" type="text" name="name" autocomplete="name" required>
+        <label for="email">Your email</label>
+        <input id="email" type="email" name="email" autocomplete="email" required>
+        <label for="message">What would you like to automate?</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <button class="btn" type="submit">Send message</button>
+        <p id="formStatus" role="status"></p>
+      </form>
+      <ul class="links">
+        <li><small>Email</small><a href="mailto:jcasundo.sedge@gmail.com">jcasundo.sedge@gmail.com</a></li>
+        <li><small>Mobile</small><a href="tel:+639615362067">+63 961 536 2067</a></li>
+        <li><small>LinkedIn</small><a href="https://www.linkedin.com/in/jonaer-casundo-a30737288" target="_blank" rel="noopener">linkedin.com/in/jonaer-casundo</a></li>
+        <li><small>GitHub</small><a href="https://github.com/jonaercasundo" target="_blank" rel="noopener">github.com/jonaercasundo</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer><div class="wrap">© 2026 Jonaer Casundo. Web developer and business process automation.</div></footer>
+
 <script>
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('show');
-    });
-  }, { threshold: 0.15 });
+const flow=document.getElementById('flow'),foot=document.getElementById('flowFoot');
+const calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const copy={
+  manual:{steps:['A request arrives by chat or email','Someone retypes it into a spreadsheet','Someone follows up for approval by hand','The report is compiled at month end'],foot:'Every step depends on a person remembering to do it.'},
+  auto:{steps:['The request is submitted through a form','Business rules check the entry','The approver is notified by SMS','The dashboard updates as it happens'],foot:'People step in only for decisions, not for passing data along.'}
+};
+let timers=[];
+function render(mode){
+  const t=flow.querySelectorAll('.t');
+  copy[mode].steps.forEach((s,i)=>t[i].textContent=s);
+  foot.textContent=copy[mode].foot;
+  flow.classList.toggle('auto',mode==='auto');
+}
+function play(){
+  timers.forEach(clearTimeout);timers=[];
+  const li=flow.querySelectorAll('.steps li');
+  li.forEach(x=>x.classList.remove('on'));
+  if(calm||!flow.classList.contains('auto')){flow.classList.remove('playing');return}
+  flow.classList.add('playing');
+  li.forEach((x,i)=>timers.push(setTimeout(()=>x.classList.add('on'),250+i*650)));
+  timers.push(setTimeout(()=>flow.classList.remove('playing'),250+li.length*650+400));
+}
+render('manual');
+flow.querySelectorAll('[data-mode]').forEach(b=>b.addEventListener('click',()=>{
+  const mode=b.dataset.mode;
+  flow.querySelectorAll('[data-mode]').forEach(x=>x.setAttribute('aria-pressed',x===b));
+  flow.classList.add('swap');
+  setTimeout(()=>{render(mode);flow.classList.remove('swap');play()},180);
+}));
 
-  document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+if(!calm&&'IntersectionObserver' in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){const el=e.target;el.classList.add('in');io.unobserve(el);setTimeout(()=>el.classList.remove('rv','in'),800)}}),{threshold:.12});
+  document.querySelectorAll('.case,.skills>div,.job').forEach(el=>{el.classList.add('rv');io.observe(el)});
+}
+if('IntersectionObserver' in window){
+  const links=[...document.querySelectorAll('.bar nav a')];
+  const spy=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)links.forEach(a=>a.classList.toggle('act',a.getAttribute('href')==='#'+e.target.id))}),{rootMargin:'-45% 0px -50% 0px'});
+  document.querySelectorAll('section[id]').forEach(s=>spy.observe(s));
+}
 
-  document.querySelectorAll('nav a').forEach(link => {
-    link.addEventListener('click', e => {
-      e.preventDefault();
-      document.querySelector(link.getAttribute('href'))
-        .scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-
-  const form = document.getElementById('contactForm');
-  const modal = document.getElementById('successModal');
-
-  form.addEventListener('submit', async e => {
-    e.preventDefault();
-
-    const data = new FormData(form);
-
-    const response = await fetch(form.action, {
-      method: form.method,
-      body: data,
-      headers: { 'Accept': 'application/json' }
-    });
-
-    if (response.ok) {
-      modal.classList.add('show');
-
-      // Auto refresh after 2.5 seconds
-      setTimeout(() => {
-        location.reload();
-      }, 2500);
-    }
-  });
-
-  function closeModal() {
-    location.reload();
-  }
+const form=document.getElementById('contactForm'),status=document.getElementById('formStatus');
+form.addEventListener('submit',async e=>{
+  e.preventDefault();
+  const btn=form.querySelector('button[type=submit]');
+  btn.disabled=true;status.textContent='Sending…';
+  try{
+    const r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{Accept:'application/json'}});
+    if(r.ok){form.reset();status.textContent='Message sent. I will reply to your email shortly.';}
+    else status.textContent='The message did not send. Please email me directly at jcasundo.sedge@gmail.com.';
+  }catch(err){status.textContent='No connection. Please try again or email me directly.';}
+  finally{btn.disabled=false}
+});
 </script>
-<script>
-  document.querySelectorAll('.skill-card').forEach(card => {
-    const button = card.querySelector('.skill-toggle');
-
-    button.addEventListener('click', e => {
-      e.stopPropagation();
-      card.classList.toggle('active');
-
-      button.innerHTML = card.classList.contains('active')
-        ? 'Hide Skills <span>▲</span>'
-        : 'View Skills <span>▼</span>';
-    });
-  });
-</script>
-
 </body>
-  <!-- Success Modal -->
-<div id="successModal" class="modal">
-  <div class="modal-content">
-    <h3>✅ Message Sent</h3>
-    <p>Thank you for reaching out. I’ll get back to you shortly.</p>
-    <button onclick="closeModal()">OK</button>
-  </div>
-</div>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
