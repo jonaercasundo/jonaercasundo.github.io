@@ -207,7 +207,16 @@ footer{padding:36px 0;border-top:1px solid var(--line);color:var(--muted);font-s
     <h2>Selected work</h2>
 
     <article class="case">
-      <div class="shot"><video controls playsinline preload="metadata" aria-label="Automated business process and AI assistant demo" onerror="this.parentNode.classList.add('empty');this.remove()"><source src="Portfolio/Astra_Personal Assistant.mp4" type="video/mp4">Your browser does not support HTML video.</video></div>
+      <div class="video-container">
+        <iframe
+            src="https://www.youtube.com/embed/HZGMXmLcZ1w"
+            title="Astra AI Personal Assistant Demo"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen>
+        </iframe>
+    </div>
       <div>
         <h3>Automated business process and AI assistant</h3>
         <p>A Laravel platform that connects workflow rules, OpenAI and Twilio so routine tasks and customer messages go out without someone sending them.</p>
